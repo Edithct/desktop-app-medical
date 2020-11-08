@@ -1,0 +1,29 @@
+main{
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+nav{
+    width: 20%;
+    height: 100vh;
+    background-color: var(--gray-very-light);
+    
+    font-size:1rem;
+}
+
+nav li a div{
+    width: 100%;
+    color:var(--gray);
+    font-weight: 750;
+    padding: 0.8rem 1.5rem;
+}
+
+nav li a div:hover{
+   background-color: var(--gray-light);
+   transition: 0.5s;
+}
+
+.container{
+    width:100%;
+}
