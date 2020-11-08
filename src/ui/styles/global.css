@@ -6,7 +6,7 @@ body{font-size: 62.5%;}
 }
 
 :root{
-    --main-color:blueviolet;
+    --main-color:rgb(29,187,197);
     --gray-very-light:rgba(0,0,0,.05);
     --gray-light:rgba(0,0,0,.1);
     --gray:rgba(0,0,0,.6);
@@ -17,4 +17,45 @@ ul,li{
 }
 a,a:hover{
     text-decoration: none;
+}
+
+
+.c-btn,.c-input {
+ padding: 0.3rem 0.5rem;
+ border-radius: 5px;
+ font-size: 0.7rem;
+ font-weight: 500;
+ min-width: 150px;
+ border:1px solid var(--gray-very-light);
+ color:var(--gray);   
+}
+
+.c-btn-circle{
+    min-width:2rem;
+    min-height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.c-input-large{
+    min-width: 300px; 
+}
+
+.c-btn-info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    font-weight: bold;
+}
+.c-btn-success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.c-btn-warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.c-btn-error {
+    color: #D8000C;
+    background-color: #FFD2D2;
 }

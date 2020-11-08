@@ -9,14 +9,14 @@ nav{
     height: 100vh;
     background-color: var(--gray-very-light);
     
-    font-size:1rem;
+    font-size:0.8rem;
 }
 
 nav li a div{
     width: 100%;
     color:var(--gray);
-    font-weight: 750;
-    padding: 0.8rem 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
 }
 
 nav li a div:hover{
@@ -26,4 +26,19 @@ nav li a div:hover{
 
 .container{
     width:100%;
+    padding: 0rem 3rem 2rem 3rem;
+}
+
+.header-page{
+    width: 100%;
+    min-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 1rem;
+}
+
+.header-page button{
+    margin-left: 1rem;
 }

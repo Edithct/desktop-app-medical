@@ -1,0 +1,38 @@
+
+/**tabla*/
+.table__head{
+    color: #FFF;
+    font-weight: 700;
+    background: var(--main-color);
+    white-space: nowrap;
+    }
+    .table-bordered td, .table-bordered th{
+    border: 0px solid #FFF;
+    }
+    .coin {
+    width:8%;
+    margin-left: 5px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    }
+    
+    .winner__table{
+        white-space: nowrap;
+    }
+    
+    @media screen and (max-width: 567px) {
+    
+        .winner__table{
+        font-size: 12px;
+        }
+        .coin {
+        width:15%;
+        margin-left:2px;
+        }
+    }
+
+    .container-table{
+        max-height: 430px;
+        overflow-y: scroll;
+    }

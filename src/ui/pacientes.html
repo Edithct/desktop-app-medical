@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Cristo Rey</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/tables.css">
+    <link rel="stylesheet" href="./styles/pacientes.css">
+</head>
+<body>
+<main>
+    <nav>
+        <ul>
+            <li>
+                <a href="">
+                    <div>Ingresos</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div>Egresos</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div>Servicios</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div>Pacientes</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div>Reportes</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="header-page">
+            <strong>Pacientes</strong>
+            <div class="user">
+                <strong>Juan Pérez</strong>
+                <button class="c-btn c-btn-error c-btn-circle">
+                    X
+                </button>
+            </div>
+        </header>
+        <section>
+            <form id="main-form">
+                <div class="section-form form__general-info">
+                    <input class="c-input" type="text" id="dni" placeholder="Ingresa DNI"/>
+                    <input type="text" class="c-input c-input-large" id="name" placeholder="Nombres y Apellidos">
+                    <div class="form-group-sex">
+                        <label for="sex">Sexo:</label>
+                        <input type="radio" id="option-m">M</input> 
+                        <input type="radio" id="option-f">F</input>
+                    </div>
+                    <input type="date" class="c-input" id="birth-date">
+                </div>
+                <div class="section-form form__contact-info">
+                    <input id="address" type="text"class="c-input c-input-large" placeholder="Dirección">
+                    <input id="phone" type="text" class="c-input" placeholder="Celular">
+                    <input id="bussines" type="text" class="c-input" placeholder="Empresa/Ocupación">
+                    <button type="submit" class="c-btn c-btn-success">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+
+        </section>
+
+        <section>
+            <div class="container-table">
+                <table class="table table-bordered   table-striped">
+                    <thead class="table__head">
+                      <tr class="winner__table">
+                        <th>S/N</th>
+                        <th><i class="fa fa-user" aria-hidden="true"></i> DNI</th>
+                        <th><i class="fa fa-map-marker" aria-hidden="true"></i> Nombres y Apellidos</th>
+                        <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Edad</th>
+                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Sexo</th>
+                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Celular</th>
+                      </tr>
+                    </thead>
+                    <tbody id="content-table">
+                      <tr class="winner__table">
+                        <td>1</td>
+                        <td>Tom</td>
+                        <td>Kolkatta</td>
+                        <td>26 Sept,2020</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                       </tr>
+                       <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                          <tr class="winner__table">
+                        <td>1</td>
+                        <td>Tom</td>
+                        <td>Kolkatta</td>
+                        <td>26 Sept,2020</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                       </tr>
+                       <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                         <tr class="winner__table">
+                          <td>1</td>
+                          <td>Tom</td>
+                          <td>Kolkatta</td>
+                          <td>26 Sept,2020</td>
+                          <td>xxxxxx5288</td>
+                          <td>xxxxxx5288</td>
+                         </tr>
+                      
+              
+                    </tbody>
+                  </table>
+            </div>
+
+  
+        </section>
+        
+
+    </div>
+</main>
+    <script src="./scripts/ingresos.js"></script>
+</body>
+</html>
