@@ -1,12 +1,11 @@
-const loginForm = document.getElementById('login-form');
+const {remote} = require("electron");
+var main = remote.require("./main");
+var Paciente = require('./models/paciente');
+/*
+let paciente=new Paciente(70214782,'Keivn',main.repository);
+paciente.save().
+then((res)=>console.log(res));
 
-const usuarioForm = document.getElementById('usuario');
-const contraseñaForm = document.getElementById('contraseña');
 
-loginForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
 
-    console.log(usuarioForm.value)
-    console.log(contraseñaForm.value)
-    document.location.href = 'ingresos.html'
-})
+*/
