@@ -1,34 +1,33 @@
 section {
     margin-top:2rem;
 }
-.section-form{
-    min-width: 100%;
-    padding: 0.3rem 0;
-    display: flex;
-    justify-content: space-between;
-}
+    .section-form{
+        min-width: 100%;
+        padding: 0.3rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+      
+    .form-group-sex{
+        margin-right: 1rem;
+        font-size: 0.7rem;
+        min-width: 100px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .form-group-sex input {
+        margin-left: 0.5rem;
+    }
 
-.section-form > input{
-    margin-right: 1rem;
-}
-
-input:last-child{
-    margin-right: 0;
-}
-
-.form-group-sex{
-    margin-right: 1rem;
-    font-size: 0.7rem;
-    min-width: 100px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.form-group-sex input {
-    margin-left: 0.5rem;
-}
-
-.user{
-    display: flex;
-}
+    .section-form > input{
+        margin-right: 1rem;
+    }
+    
+    input:last-child{
+        margin-right: 0;
+    }
+    .c-imput{
+        padding-left:20%;
+    }
