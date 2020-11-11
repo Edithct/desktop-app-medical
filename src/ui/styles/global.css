@@ -4,7 +4,13 @@ body{font-size: 62.5%;}
     margin: 0;
     box-sizing: border-box;
 }
-
+.rayita{
+    border-bottom: 1px solid var(--gray-light);
+    box-sizing: content-box;
+    margin-bottom: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 :root{
     --main-color:rgb(29,187,197);
     --gray-very-light:rgba(0,0,0,.05);
@@ -25,7 +31,7 @@ a,a:hover{
  border-radius: 5px;
  font-size: 0.7rem;
  font-weight: 500;
- min-width: 150px;
+ min-width: 140px;
  border:1px solid var(--gray-very-light);
  color:var(--gray);   
 }
@@ -38,18 +44,17 @@ a,a:hover{
     justify-content: center;
     align-items: center; 
 }
-.c-input-large{
-    min-width: 300px; 
-}
 
 .c-btn-info {
     color: #00529B;
     background-color: #BDE5F8;
     font-weight: bold;
+    width: 50px;
 }
 .c-btn-success {
     color: #4F8A10;
     background-color: #DFF2BF;
+    width: 50px;
 }
 .c-btn-warning {
     color: #9F6000;
@@ -59,3 +64,76 @@ a,a:hover{
     color: #D8000C;
     background-color: #FFD2D2;
 }
+.product-inputs {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .product-inputs-left {
+    padding-right: 0;
+    margin: 0px;
+    text-align:justify;
+  }
+  .product-inputs-right {
+    padding-left: 0;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+    font-size: 4em;
+  }
+  .item-display {
+    font-weight: bold;
+    font-size: 3em;
+  }
+  #main{
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 0px;
+    overflow: hidden;
+  }
+  
+  #tabs{
+    position: relative;
+  }
+  
+  .pestaña + a {
+    display: block;
+    float: left;
+    height:40px;
+    line-height: 35px;
+    padding: 0 50px;
+    border: 1px var(--gray-very-light);
+    background-color: var(--gray-very-light);
+    margin-bottom: -1px;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+  }
+  
+  
+  #pnl_1, #pnl_2, #pnl_3{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border: none;
+    clear: both;
+    overflow: hidden;
+  }
+  
+    #pnl_1 > div, #pnl_2 > div, #pnl_3 > div{
+      opacity: 0;
+      transition: all 0.1s ease;
+      padding: 20px 8px;
+    }
+  
+  #uno:target ~ #pnl_1, #dos:target ~ #pnl_2, #tres:target ~ #pnl_3{
+    position: static;
+    border: 1px solid #ddd;
+  }
+  
+    #uno:target ~ #pnl_1 > div, #dos:target ~ #pnl_2 > div, #tres:target ~ #pnl_3 > div{
+      opacity: 1;
+      transition: all 1s ease;
+    }

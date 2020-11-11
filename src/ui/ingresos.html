@@ -30,13 +30,18 @@
                 </a>
             </li>
             <li>
+                <a href="reportes.html">
+                    <div>Reportes</div>
+                </a>
+            </li>
+            <li>
                 <a href="pacientes.html">
                     <div>Pacientes</div>
                 </a>
             </li>
             <li>
-                <a href="reportes.html">
-                    <div>Reportes</div>
+                <a href="usuarios.html">
+                    <div>Usuarios</div>
                 </a>
             </li>
         </ul>
@@ -44,15 +49,45 @@
     <div class="container">
         <header class="header-page">
             <strong>INGRESOS</strong>
+            <input type="date" class="c-input" id="birth-date">
             <div class="user">
                 <strong>Juan Pérez</strong>
                 <img src="./imgs/logout.png" class="user "id="" alt="">
             </div>
         </header>
-        
+        <section class="rayita" >
+            <form id="main-form">
+                <div class="section-form form__general-info" class="product-inputs-left" >
+                    <input id="servicios_ingresos"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Ingreso" ng-model="inputed_product_name" ng-change="select_product()">
+                    <datalist id="product_names">
+                      <option ng-repeat="a in product_list" value="{{a.name}}">
+                    </datalist>
+                    <input id="concepto_ingreso"class="c-input form-control " list="product_names" type="text" placeholder="Especificación" ng-model="inputed_product_name" ng-change="select_product()">
+                    <datalist id="product_names">
+                      <option ng-repeat="a in product_list" value="{{a.name}}">
+                    </datalist>
+                    <input id="cant_ingreso"class="c-input form-control" type="number" placeholder="Cantidad">
+                    <input id="monto_ingreso" type="text" class="c-input form-control" placeholder="Monto">
+                </div>
+                <div class="section-form form__contact-info">
+                    <input id= "id_usuario"class="c-input form-control" type="text" placeholder="ID- Usuario">
+                    <input id="nombre_usuario" type="text" class="c-input form-control" placeholder="Nombre de Usuario">
+                    <button type="submit" class="c-btn c-btn-info form-control ">
+                        Descuento
+                    </button>
+                </div>    
+                <div class="section-form form__contact-info">
+                    <input id= "descuento" class="c-input form-control" type="text" placeholder="Ingresar Descuento">
+                    <input id="monto_final_ingreso" type="text" class="c-input form-control" placeholder="Monto Total">
+                    <button type="submit" class="c-btn c-btn-success form-control ">
+                        Agregar
+                    </button>
+                </div>  
+            </form>
+        </section>  
     </div>
 </main>
     <script src="./app.js"></script>
-    <script src="./scripts/pacientes.js"></script>
+    <script src="./scripts/ingresos.js"></script>
 </body>
 </html>

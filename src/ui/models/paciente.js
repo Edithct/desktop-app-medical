@@ -1,4 +1,3 @@
-
 class Paciente {
     table='pacientes';
     constructor(dni,nombres,nacimiento,sexo,direccion,telefono,ocupacion_empresa,repository){

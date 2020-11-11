@@ -1,6 +1,4 @@
-section {
-    margin-top:2rem;
-}
+
     .section-form{
         min-width: 100%;
         padding: 0.3rem 0;
@@ -22,12 +20,10 @@ section {
     }
 
     .section-form > input{
-        margin-right: 1rem;
+        margin-right: 0.6rem;
     }
     
     input:last-child{
         margin-right: 0;
     }
-    .c-imput{
-        padding-left:20%;
-    }
+    

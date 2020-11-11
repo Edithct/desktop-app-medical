@@ -30,13 +30,18 @@
                 </a>
             </li>
             <li>
+                <a href="reportes.html">
+                    <div>Reportes</div>
+                </a>
+            </li>
+            <li>
                 <a href="pacientes.html">
                     <div>Pacientes</div>
                 </a>
             </li>
             <li>
-                <a href="reportes.html">
-                    <div>Reportes</div>
+                <a href="usuarios.html">
+                    <div>Usuarios</div>
                 </a>
             </li>
         </ul>
@@ -49,7 +54,33 @@
                 <img src="./imgs/logout.png" class="user "id="" alt="">
             </div>
         </header>
-        
+        <section  >
+            <form class="rayita" id="main-form">
+                <div class="section-form form__general-info" class="product-inputs-left" >
+                    <input id="dni_usuario"class="c-input form-control" type="text" placeholder="Ingresa DNI" />
+                    <input type="text" class="c-input form-control" id="name_usuarios" placeholder="Nombres y Apellidos">
+                    <div class="form-group-sex">
+                        <label for="sex">Sexo:</label>
+                        <input type="radio" id="option-m">M</input> 
+                        <input type="radio" id="option-f">F</input>
+                    </div>
+                    <input type="date" class="c-input form-control" id="birth-date">
+                </div>
+                <div class="section-form form__general-info" class="product-inputs-left" >
+                    <input id="address" type="text"class="c-input form-control input-lg" placeholder="Dirección">
+                    <input id="phone" type="text" class="c-input form-control" placeholder="Celular">
+                    <input id="bussines" type="text" class="c-input form-control input-lg" placeholder="Profesion">
+                    
+                </div>
+                <div class="section-form form__contact-info">
+                    <input id="user" type="text"class="c-input form-control input-lg" placeholder="Nombre de Usuario">
+                    <input id="password" type="password"class="c-input form-control input-lg" placeholder="Contraseña">                   
+                   <button id="nuevo_usuario"type="submit" class="c-btn c-btn-success form-control">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </section>
     </div>
 </main>
     <script src="./app.js"></script>
