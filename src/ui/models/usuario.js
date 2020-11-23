@@ -15,6 +15,7 @@ class Usuario {
     }
 
     async save(){
+        
         let result=await this.repository.createElement(this.table,this.getElement());
         return result;
     }
@@ -30,7 +31,7 @@ class Usuario {
             username:this.username,
             dni:this.dni,
             telefono:this.telefono,
-            rol_id:this.rol_id
+            rol_id:Number(this.rol_id)
         } 
     }
 }

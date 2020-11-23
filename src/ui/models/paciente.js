@@ -29,4 +29,4 @@ class Paciente {
     }
 }
 
-module.exports=Paciente;
+module.exports=Paciente; 

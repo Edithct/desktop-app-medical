@@ -1,10 +1,8 @@
 class Movimiento {
     table='movimientos';
-    constructor(cantidad,fecha,descuento,detalle,monto_total,usuario_id,servicio_id,paciente_id,repository){
+    constructor(cantidad,descuento,monto_total,usuario_id,servicio_id,paciente_id,repository){
         this.cantidad=cantidad;
-        this.fecha=fecha;
         this.descuento=descuento;
-        this.detalle=detalle;
         this.monto_total=monto_total;
         this.usuario_id=usuario_id;
         this.servicio_id=servicio_id;
@@ -19,14 +17,12 @@ class Movimiento {
 
     getElement(){
         return {
-            cantidad:this.cantidad,
-            fecha:this.fecha,
-            descuento:this.descuento,
-            detalle:this.detalle,
-            monto_total:this.monto_total,
-            usuario:this.usuario_id,
-            servicio:this.servicio_id,
-            paciente_id:this.paciente_id
+            cantidad:Number(this.cantidad),
+            descuento:Number(this.descuento),
+            monto_total:Number(this.monto_total),
+            usuario_id:Number(this.usuario_id),
+            servicio_id:Number(this.servicio_id),
+            paciente_id:Number(this.paciente_id)
         } 
     }
 }

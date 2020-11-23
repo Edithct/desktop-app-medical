@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/pacientes.css">
+    <link rel="stylesheet" href="./styles/tables.css">
 </head>
 <body>
 <main>
@@ -26,6 +27,11 @@
             <li>
                 <a href="servicios.html">
                     <div>Servicios</div>
+                </a>
+            </li>
+            <li>
+                <a href="costos.html">
+                    <div>Costos</div>
                 </a>
             </li>
             <li>
@@ -85,23 +91,23 @@
                         <th><i class="fa fa-map-marker" aria-hidden="true"></i> Nombres y Apellidos</th>
                         <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Edad</th>
                         <th> <i class="fa fa-phone" aria-hidden="true"></i> Sexo</th>
-                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Celular</th>
-                        <th><i class="fa fa-bussines" aria-hidden="true"></i> Ocupacion</th>
+                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Ocupacion-Empresa</th>
+                        <th><i class="fa fa-bussines" aria-hidden="true"></i> Celular</th>
                         <th><i class="fa fa-address" aria-hidden="true"></i> Direccion</th>
+                        <th><i class="fa fa-address" aria-hidden="true"></i> Acciones</th>
                       </tr>
                     </thead>
                     <tbody id="content-table">
                       <tr class="winner__table">
-                        <td>1</td>
-                        <td>Tom</td>
-                        <td>Kolkatta</td>
-                        <td>26 Sept,2020</td>
-                        <td>xxxxxx5288</td>
-                        <td>xxxxxx5288</td>
-                        <td>xxxxxx5288</td>
+                        
                        </tr>
                     </tbody>
                   </table>
+            </div>
+            <div class="paginate">
+                <button class="c-btn c-btn-info" id="prev-page" onclick="updatePage(-1)">Atras</button>
+                <button class="c-btn" id="current-page">Pagina 1</button>
+                <button class="c-btn c-btn-info" id="next-page" onclick="updatePage(1)">Siguiente</button>
             </div>
         </section>
     </div>

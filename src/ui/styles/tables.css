@@ -33,6 +33,18 @@
     }
 
     .container-table{
-        max-height: 430px;
+        max-height: 400px;
         overflow-y: scroll;
+    }
+
+    .paginate{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .paginate button{
+        margin:0px 5px;
     }

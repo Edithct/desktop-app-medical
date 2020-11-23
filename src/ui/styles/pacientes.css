@@ -19,7 +19,7 @@
         margin-left: 0.5rem;
     }
 
-    .section-form > input{
+    .section-form > input,.section-form>select{
         margin-right: 0.6rem;
     }
     

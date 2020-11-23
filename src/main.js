@@ -14,6 +14,25 @@ async function createElement(table,element){
 function test(){
     console.log('Hola desde main');
 }
+
+async function getElements(table,element){
+    try {
+        let conn =await getConnection();
+        let result = await conn.query('SELECT '+table +'FROM'+ element);
+        return {error:false,result};
+    } catch (error) {
+        return {error:true,message:error}
+    }
+}
+async function getTables(query){
+    try {
+        let conn =await getConnection();
+        let result = await conn.query(query);
+        return {error:false,result};
+    } catch (error) {
+        return {error:true,message:error}
+    }
+}
 /*
 async function deleteElement(table,element){
     try {
@@ -33,15 +52,7 @@ async function updateElement(table,element){
         return {error:true,message:error}
     }
 }
-async function getElements(table,element){
-    try {
-        let conn =await getConnection();
-        let result = await conn.query(´insert into ${table} set ?´,element);
-        return {error:false,result};
-    } catch (error) {
-        return {error:true,message:error}
-    }
-}
+
 */
 
 let window
@@ -63,7 +74,9 @@ function createWindow() {
 module.exports = {
     createWindow,
     repository:{
-        createElement
+        createElement,
+        getElements,
+        getTables
     },
     test
     

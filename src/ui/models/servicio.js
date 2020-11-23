@@ -22,7 +22,7 @@ class Servicio {
             detalle:this.detalle,
             es_servicio:this.es_servicio,
             es_ingreso:this.es_ingreso,
-            categoria_id:this.categoria_id
+            categoria_id:this.categoria_id,
         } 
     }
 }

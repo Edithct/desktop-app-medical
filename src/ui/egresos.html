@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/pacientes.css">
-    <link rel="stylesheet" href="./styles/egresos.css">
+    <link rel="stylesheet" href="./styles/tables.css">
 
 </head>
 <body>
@@ -31,6 +31,11 @@
                 </a>
             </li>
             <li>
+                <a href="costos.html">
+                    <div>Costos</div>
+                </a>
+            </li>
+            <li>
                 <a href="reportes.html">
                     <div>Reportes</div>
                 </a>
@@ -50,7 +55,7 @@
     <div class="container">
         <header class="header-page">
             <strong>EGRESOS</strong>
-            <input type="date" class="c-input" id="birth-date">
+            <input type="date" class="c-input" id="date">
             <div class="user">
                 <strong>Juan Pérez</strong>
                 <img src="./imgs/logout.png" class="user "id="" alt="">
@@ -60,20 +65,14 @@
         <section class="rayita" >
             <form id="main-form">
                     <div class="section-form form__general-info" class="product-inputs-left" >
-                        <input id="servicios_egresos"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Egreso" ng-model="inputed_product_name" ng-change="select_product()">
-                        <datalist id="product_names">
-                          <option ng-repeat="a in product_list" value="{{a.name}}">
-                        </datalist>
-                        <input id="concepto_egreso"class="c-input form-control " list="product_names" type="text" placeholder="Especificación" ng-model="inputed_product_name" ng-change="select_product()">
-                        <datalist id="product_names">
-                          <option ng-repeat="a in product_list" value="{{a.name}}">
-                        </datalist>
+                        <select id="servicios_egresos"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Egreso"></select>
+                        <select id="concepto_egreso"class="c-input form-control " list="product_names" type="text" placeholder="Especificación"></select>
                         <input id="monto_egreso" type="text" class="c-input form-control" placeholder="Monto">
                         
                     </div>
                      <div class="section-form form__contact-info">
                         <input id="cant_egresos"class="c-input form-control" type="number" placeholder="Cantidad">
-                        <input id="monto_total_egreso" type="text" class="c-input form-control" placeholder="Monto Total">
+                        <input id="monto_egreso" type="text" class="c-input form-control" placeholder="Monto Total">
                         <button type="submit" class="c-btn c-btn-success form-control ">
                             Agregar
                         </button>
@@ -81,25 +80,45 @@
             </form>
         </section>         
            
-        <section>
-            <div class="container-table">        
-            
-                <!-- Cart contents -->
-            <div class="well" id="cartDisplay">
-                  <table class="table table-condensed table-striped table-responsive table-borderless" ng-model=discount_row>
-                    <tr>
-                      <th>{{discount_row[discount_row.length-1].name}}</th>
-                      <th>{{discount_row[discount_row.length-1].discount}}</th>
-                      <th>{{discount_row[discount_row.length-1].discount}}</th>
-                    </tr>
-                    <tr ng-repeat="x in cart">
-                      <td>{{x.name + ' @ $' + x.price + ' ea'}}</td>
-                      <td>{{x.quantity}}</td>
-                      <td>{{x.quantity * x.price | currency:$}}</td>
-                    </tr>
+        <section >
+            <div class="container-table">
+                <table class="table table-bordered   table-striped">
+                    <thead class="table__head">
+                      <tr class="winner__table">
+                        <th><i class="fa fa-user" aria-hidden="true"></i> N°</th>
+                        <th><i class="fa fa-map-marker" aria-hidden="true"></i> Engreso</th>
+                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Monto</th>
+                        <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Cantidad</th>
+                        <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Usuario</th>
+                        <th><i class="fa fa-address" aria-hidden="true"></i> Monto Total</th>
+                      </tr>
+                    </thead>
+                    <tbody id="content-table">
+                      <tr class="winner__table">
+                        <td>1</td>
+                        <td>Tom</td>
+                        <td>Kolkatta</td>
+                        <td>26 Sept,2020</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                       </tr>
+                    </tbody>
+                    <tr class="winner__table">
+                        <td colspan="6"><i class="fa fa-user" aria-hidden="true"></i>
+                            <img src="./imgs/print.png" alt=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            TOTAL
+                        </th>
+                        <td>xx.xx</td>
+                      </tr>
                   </table>
-                </div>
             </div>
+            <div class="paginate">
+                <button class="c-btn c-btn-info" id="prev-page" onclick="updatePage(-1)">Atras</button>
+                <button class="c-btn" id="current-page">Pagina 1</button>
+                <button class="c-btn c-btn-info" id="next-page" onclick="updatePage(1)">Siguiente</button>
+            </div>
+        </section>
     </div>
     
     

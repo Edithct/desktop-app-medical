@@ -53,38 +53,26 @@
     </nav>
     <div class="container">
         <header class="header-page">
-            <strong>USUARIOS</strong>
+            <strong>COSTOS</strong>
             <div class="user">
                 <strong>Juan Pérez</strong>
                 <img src="./imgs/logout.png" class="user "id="" alt="">
             </div>
         </header>
-        <section  >
-            <form class="rayita" id="main-form">
-                <div class="section-form form__general-info" class="product-inputs-left" >
-                    <input id="dni"class="c-input form-control" type="text" placeholder="Ingresa DNI" />
-                    <input id="name" type="text" class="c-input form-control"  placeholder="Nombres y Apellidos">
-                    <div class="form-group-sex">
-                        <label for="sex">Sexo:</label>
-                        <input type="radio" id="option-m">M</input> 
-                        <input type="radio" id="option-f">F</input>
-                    </div>
-                    <input type="date" class="c-input form-control" id="date">
-                </div>
-                <div class="section-form form__general-info" class="product-inputs-left" >
-                    <input id="address" type="text"class="c-input form-control input-lg" placeholder="Dirección">
-                    <input id="phone" type="text" class="c-input form-control" placeholder="Celular">
-                    <input id="bussines" type="text" class="c-input form-control input-lg" placeholder="Profesion">
+        <section class="rayita" >
+            <form id="main-form">
+                <div class="section-form form__contact-info">
+                    <input id="name_servicios" class="c-input form-control" type="text" placeholder="Nombre de nuevo Servicio - Producto">
+                    <input id="detalle_servicio" type="text" class="c-input form-control" placeholder="Detalle">
                     
                 </div>
-                <div class="section-form form__contact-info">
-                    <input id="username" type="text"class="c-input form-control input-lg" placeholder="Nombre de Usuario">
-                    <input id="password" type="password"class="c-input form-control input-lg" placeholder="Contraseña">
-                    <select id="rol" type="text"class="c-input form-control input-lg" placeholder="Rol"></select>                   
-                   <button type="submit" class="c-btn c-btn-success form-control">
-                        Guardar
+                <div class="section-form form__general-info" class="product-inputs-left" >
+                    <select id="categoria"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Servicio" ng-model="inputed_product_name" ng-change="select_product()">
+                    <input id="price" type="text" class="c-input form-control" placeholder="Costo">
+                    <button id="agregar_nuevo_servicio"type="submit" class="c-btn c-btn-success form-control ">
+                        Añadir
                     </button>
-                </div>
+                </div>      
             </form>
         </section>
         <section >
@@ -92,18 +80,15 @@
                 <table class="table table-bordered   table-striped">
                     <thead class="table__head">
                       <tr class="winner__table">
-                        <th><i class="fa fa-user" aria-hidden="true"></i> DNI</th>
-                        <th><i class="fa fa-map-marker" aria-hidden="true"></i> Nombres y Apellidos</th>
-                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Username</th>
-                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Celular</th>
-                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Profesion</th>
-                        <th><i class="fa fa-bussines" aria-hidden="true"></i> Rol</th>
-                        <th><i class="fa fa-address" aria-hidden="true"></i> Acciones</th>
+                        <th><i class="fa fa-map-marker" aria-hidden="true"></i> Tipo de Servicio</th>
+                        <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Servicio</th>
+                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Detalle</th>
+                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Costo</th>
+                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Acciones</th>
                       </tr>
                     </thead>
                     <tbody id="content-table">
-                      <tr class="winner__table">
-                        </tr>
+                      
                     </tbody>
                   </table>
             </div>
@@ -115,7 +100,8 @@
         </section>
     </div>
 </main>
+</main>
     <script src="./app.js"></script>
-    <script src="./scripts/usuarios.js"></script>
+    <script src="./scripts/costos.js"></script>
 </body>
 </html>

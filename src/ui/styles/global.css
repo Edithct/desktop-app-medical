@@ -36,6 +36,7 @@ a,a:hover{
  color:var(--gray);   
 }
 
+
 .c-btn-circle{
     min-width:2rem;
     min-height: 2rem;
@@ -98,7 +99,9 @@ a,a:hover{
   #tabs{
     position: relative;
   }
-  
+  .centrar{
+    text-align: center;
+  }
   .pestaña + a {
     display: block;
     float: left;

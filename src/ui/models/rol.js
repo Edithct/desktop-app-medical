@@ -3,6 +3,7 @@ class Rol {
     constructor(nombre,detalle,repository){
         this.nombre=nombre;
         this.detalle=detalle;
+        this.modulesAuthorized=detalle.split(';');
         this.repository=repository;
     }
 
@@ -17,6 +18,13 @@ class Rol {
             detalle:this.detalle
         } 
     }
+
+    isAuthorized(module){
+        if(this.modulesAuthorized.indexOf(module)>-1)
+            return true;
+        return false;    
+    }
+
 }
 
 module.exports=Rol;

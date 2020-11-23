@@ -30,6 +30,11 @@
                 </a>
             </li>
             <li>
+                <a href="costos.html">
+                    <div>Costos</div>
+                </a>
+            </li>
+            <li>
                 <a href="reportes.html">
                     <div>Reportes</div>
                 </a>
@@ -49,7 +54,8 @@
     <div class="container">
         <header class="header-page">
             <strong>INGRESOS</strong>
-            <input type="date" class="c-input" id="birth-date">
+            <input type="date" class="c-input" id="date">
+            
             <div class="user">
                 <strong>Juan Pérez</strong>
                 <img src="./imgs/logout.png" class="user "id="" alt="">
@@ -58,33 +64,73 @@
         <section class="rayita" >
             <form id="main-form">
                 <div class="section-form form__general-info" class="product-inputs-left" >
-                    <input id="servicios_ingresos"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Ingreso" ng-model="inputed_product_name" ng-change="select_product()">
-                    <datalist id="product_names">
-                      <option ng-repeat="a in product_list" value="{{a.name}}">
-                    </datalist>
-                    <input id="concepto_ingreso"class="c-input form-control " list="product_names" type="text" placeholder="Especificación" ng-model="inputed_product_name" ng-change="select_product()">
-                    <datalist id="product_names">
-                      <option ng-repeat="a in product_list" value="{{a.name}}">
-                    </datalist>
-                    <input id="cant_ingreso"class="c-input form-control" type="number" placeholder="Cantidad">
+                    <select id="servicios_ingresos"class="c-input form-control" list="product_names" type="text" placeholder="Tipo de Ingreso"></select>
+                    <select id="concepto_ingreso"class="c-input form-control " list="product_names" type="text" placeholder="Especificación"></select>
+                    <input id="cant_ingreso"class="c-input form-control" type="number" placeholder="Cantidad" min="1">
                     <input id="monto_ingreso" type="text" class="c-input form-control" placeholder="Monto">
                 </div>
                 <div class="section-form form__contact-info">
-                    <input id= "id_usuario"class="c-input form-control" type="text" placeholder="ID- Usuario">
-                    <input id="nombre_usuario" type="text" class="c-input form-control" placeholder="Nombre de Usuario">
-                    <button type="submit" class="c-btn c-btn-info form-control ">
-                        Descuento
-                    </button>
+                    <input id= "id_paciente"class="c-input form-control" type="text" placeholder="ID-Paciente">
+                    <input id="nombre_paciente" type="text" class="c-input form-control" placeholder="Nombre de Paciente" disabled>
+                    
                 </div>    
                 <div class="section-form form__contact-info">
                     <input id= "descuento" class="c-input form-control" type="text" placeholder="Ingresar Descuento">
-                    <input id="monto_final_ingreso" type="text" class="c-input form-control" placeholder="Monto Total">
+                    <input id="monto_total" type="text" class="c-input form-control" placeholder="Monto Total">
                     <button type="submit" class="c-btn c-btn-success form-control ">
                         Agregar
                     </button>
                 </div>  
             </form>
-        </section>  
+        </section> 
+        <section >
+            <div class="container-table">
+                <table class="table table-bordered   table-striped">
+                    <thead class="table__head">
+                      <tr class="winner__table">
+                        <th><i class="fa fa-user" aria-hidden="true"></i> N°</th>
+                        <th><i class="fa fa-map-marker" aria-hidden="true"></i> Ingreso</th>
+                        <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Cantidad</th>
+                        <th> <i class="fa fa-phone" aria-hidden="true"></i> Monto unitario</th>
+                        <th><i class="fa fa-trophy" aria-hidden="true"></i> Usuario</th>
+                        <th><i class="fa fa-bussines" aria-hidden="true"></i> Descuento </th>
+                        <th><i class="fa fa-address" aria-hidden="true"></i> Monto Total</th>
+                      </tr>
+                    </thead>
+                    <tbody id="content-table">
+                      <tr class="winner__table">
+                        <td>1</td>
+                        <td>Tom</td>
+                        <td>Kolkatta</td>
+                        <td>26 Sept,2020</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                       </tr>
+                       <td>2</td>
+                        <td>Tom</td>
+                        <td>Kolkatta</td>
+                        <td>26 Sept,2020</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                        <td>xxxxxx5288</td>
+                       </tr>
+                    </tbody>
+                    <tr class="winner__table">
+                        <td colspan="6"><i class="fa fa-user" aria-hidden="true"></i>
+                            <img src="./imgs/print.png" alt=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            TOTAL
+                        </th>
+                        <td>xx.xx</td>
+                      </tr>
+                  </table>
+            </div>
+            <div class="paginate">
+                <button class="c-btn c-btn-info" id="prev-page" onclick="updatePage(-1)">Atras</button>
+                <button class="c-btn" id="current-page">Pagina 1</button>
+                <button class="c-btn c-btn-info" id="next-page" onclick="updatePage(1)">Siguiente</button>
+            </div>
+        </section> 
     </div>
 </main>
     <script src="./app.js"></script>

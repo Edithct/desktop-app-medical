@@ -1,59 +1,63 @@
+
 console.log(main.repository);
 const table=document.querySelector("#content-table"); 
 const btnPrevPage=document.querySelector("#prev-page");
 const btnCurrentPage=document.querySelector("#current-page");
 const btnNextPage=document.querySelector("#next-page");
 
+
 let tableManager = new TableManager(
-    'select pc.*, TIMESTAMPDIFF(YEAR, nacimiento, now()) as edad from pacientes as pc where pc.deleted_at is null order by pc.nombres asc limit $1 offset $2;',
+    'select us.*,rl.nombre as rol from usuarios us left join roles rl on us.rol_id=rl.id where us.deleted_at is null and rl.deleted_at is null order by us.nombre asc limit $1 offset $2;',
     main.repository
 )
+
 updateTable();
 
 function updateTable(){
 tableManager.getData().
 then((res)=>{
     if(!res.error){
-        let tableHTML=tableManager.renderTable(res.result,['dni','nombres','edad','sexo','ocupacion_empresa','celular','direccion'])
+        let tableHTML=tableManager.renderTable(res.result,['dni','nombre','username','telefono','profesion','rol'])
         table.innerHTML=tableHTML;
         btnCurrentPage.innerHTML='Página '+tableManager.getCurrentPage();
     }
     console.log(res);
 })
-}
-
-function updatePage(numberPage){
+}function updatePage(numberPage){
     let isCorrect=tableManager.setCurrentPage(tableManager.getCurrentPage()+numberPage);
     if(isCorrect){
         updateTable();
     }
 }
 
+
 const inputDni=document.querySelector("#dni");
 const inputName=document.querySelector("#name");
 const inputOptionM=document.querySelector("#option-m");
 const inputOptionF=document.querySelector("#option-f");
-const inputBirthDate=document.querySelector("#birth-date");
+const inputDate=document.querySelector("#date");
 const inputPhone=document.querySelector("#phone");
 const inputAddress=document.querySelector("#address");
 const inputBussines=document.querySelector("#bussines");
+const inputUsername=document.querySelector("#username");
+const inputPassword=document.querySelector("#password");
+const inputRol=document.querySelector("#rol");
 
-const form=document.querySelector("#main-form");
 
-inputDni.addEventListener('change',()=>{
-    verificarDni(inputDni.value);
+let selectRol=new TableManager('select * from roles where deleted_at is null order by nombre asc;',main.repository);
+
+selectRol.getData().
+then((res)=>{
+    if(!res.error){
+        selectRol.renderSelect(res.result,{key:'id',value:'nombre'},inputRol);
+    }
 })
 
-function verificarDni(idPaciente){
-    let dni = new TableManager('select * from pacientes where deleted_at is null and dni='+idPaciente+'',main.repository);
 
-    dni.getData().
-    then((res)=>{
-        if(!res.error){
-            alert('Ya exite un usuario registrado con ese DNI');
-        }
-    })
-}
+
+
+
+const form=document.querySelector("#main-form");
 
 function handleSex(radio1,radio2){
     if(radio1.checked){
@@ -76,16 +80,20 @@ form.addEventListener('submit',(e)=>{
     let name=inputName.value;
     let optionM=inputOptionM.checked;
     let sex=optionM?'M':'F';
-    let birthdate=inputBirthDate.value;
+    let date=inputDate.value;
     let phone=inputPhone.value;
     let address=inputAddress.value;
     let bussines=inputBussines.value;
+    let username=inputUsername.value;
+    let passsword=inputPassword.value;
+    let rol=inputRol.value;
 
-    let paciente=new Paciente(dni,name,birthdate,sex,address,phone,bussines,main.repository);
-    paciente.save().
+    let usuario=new Usuario(name,date,sex,bussines,address,passsword,username,dni,phone,rol,main.repository);
+    console.log(usuario);
+    usuario.save().
     then(res=>{
         if(!res.error){
-            alert('Paciente registrado correctamente');
+            alert('Usuario registrado correctamente');
             updateTable();
             form.reset();
         }
